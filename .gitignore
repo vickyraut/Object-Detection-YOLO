@@ -175,5 +175,7 @@ pyrightconfig.json
 
 #My changes
 Resources/
+.pt
+.avi
 
 # End of https://www.toptal.com/developers/gitignore/api/python
