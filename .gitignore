@@ -175,7 +175,8 @@ pyrightconfig.json
 
 #My changes
 Resources/
-.pt
-.avi
+# Ignore pt and avi files
+*.pt
+*.avi
 
 # End of https://www.toptal.com/developers/gitignore/api/python

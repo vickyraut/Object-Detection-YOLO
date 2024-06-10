@@ -2,6 +2,11 @@ import cv2
 from kalmanfilter import KalmanFilter
 from ultralytics import YOLO
 import math
+import gdown
+
+# download best model weight
+url = f"https://drive.google.com/uc?export=download&id={'17bWfGTeyTHmqn1_LKlRB3b6w4YBrJfCn'}"
+gdown.download(url, 'model_weights', quiet=False)
 
 classNames = ["BasketBall"]
 cap = cv2.VideoCapture('videos/demo1.mp4')
@@ -10,7 +15,7 @@ frame_width = int(cap.get(3))
 frame_height = int(cap.get(4))
 
 output = cv2.VideoWriter('output.avi', cv2.VideoWriter.fourcc('M', 'J', 'P', 'G'), 10, (frame_width, frame_height))
-model = YOLO('model_weights/best.pt')
+model = YOLO('model_weights/best_basketball_tragectory.pt')
 
 if not cap.isOpened():
     print("Error in Reading Video!")
