@@ -4,10 +4,7 @@ from ultralytics import YOLO
 import math
 import gdown
 
-# download best model weight
-destination = 'model_weights/best_basketball_trajectory.pt'
-url = f"https://drive.google.com/uc?export=download&id={'1pKlN8rdws6aJZW2O-Cuoe40mMgX1nB51'}"
-gdown.download(url, destination, quiet=False)
+# Run download_weights.py to get all the model weights
 
 classNames = ["BasketBall"]
 cap = cv2.VideoCapture('videos/demo1.mp4')
